@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Allura, Google_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const allura = Allura({
+  variable: "--font-allura",
+
+  weight: ["400"],
+  preload: true,
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const googleSans = Google_Sans({
+  variable: "--font-google-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -24,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${allura.variable} ${googleSans.variable} antialiased`}>
         {children}
       </body>
     </html>
