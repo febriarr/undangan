@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { MapPin } from "lucide-react";
 
 export default function EventSection() {
   return (
@@ -43,44 +44,50 @@ export default function EventSection() {
         </div>
         <div
           className={
-            "w-full md:w-4/5 border-4 border-neutral-600 rounded-t-[50%] rounded-b-xl bg-black p-6 space-y-4 flex flex-col justify-center items-center text-center"
+            "w-full md:w-4/5 border-4 border-neutral-600 rounded-t-[50%] rounded-b-xl bg-black p-6 py-14 space-y-4 flex flex-col justify-center items-center text-center"
           }
         >
-          <h4 className={"text-xl font-allura pb-4 border-b w-fit"}>
+          <h4 className={"text-3xl font-allura pb-4 border-b w-fit"}>
             Akad Nikah
+          </h4>
+          <p className={"text-xl"}>Hari</p>
+          <p className={"text-4xl"}>0</p>
+          <p className={"text-lg"}>Bulan Tahun</p>
+          <p className={"text-sm"}>Jam</p>
+          <p className={"text-sm"}>
+            <MapPin className={"w-4 h-4"} />
+          </p>
+          <p className={"text-sm"}>Kediaman Mempelai pria/wanita</p>
+          <p className={"text-sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+            perspiciatis quaerat tempore!
+          </p>
+          <Button size={"sm"} className={"bg-accent-primary"}>
+            <MapPin className={"w-4 h-4"} /> Google Maps
+          </Button>
+        </div>
+        <div
+          className={
+            "w-full md:w-4/5 border-4 border-neutral-600 rounded-t-[50%] rounded-b-xl bg-black p-6 py-14 space-y-4 flex flex-col justify-center items-center text-center"
+          }
+        >
+          <h4 className={"text-3xl font-allura pb-4 border-b w-fit"}>
+            Resepsi
           </h4>
           <p className={"text-xl"}>Hari</p>
           <p className={"text-3xl"}>0</p>
           <p className={"text-lg"}>Bulan Tahun</p>
           <p className={"text-sm"}>Jam</p>
-          <p className={"text-sm"}>icon</p>
+          <p className={"text-sm"}>
+            <MapPin className={"w-4 h-4"} />
+          </p>
           <p className={"text-sm"}>Kediaman Mempelai pria/wanita</p>
           <p className={"text-sm"}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
             perspiciatis quaerat tempore!
           </p>
           <Button size={"sm"} className={"bg-accent-primary"}>
-            Google Maps
-          </Button>
-        </div>
-        <div
-          className={
-            "w-full md:w-4/5 border-4 border-neutral-600 rounded-t-[50%] rounded-b-xl bg-black p-6 space-y-4 flex flex-col justify-center items-center text-center"
-          }
-        >
-          <h4 className={"text-xl font-allura pb-4 border-b w-fit"}>Resepsi</h4>
-          <p className={"text-xl"}>Hari</p>
-          <p className={"text-3xl"}>0</p>
-          <p className={"text-lg"}>Bulan Tahun</p>
-          <p className={"text-sm"}>Jam</p>
-          <p className={"text-sm"}>icon</p>
-          <p className={"text-sm"}>Kediaman Mempelai pria/wanita</p>
-          <p className={"text-sm"}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
-            perspiciatis quaerat tempore!
-          </p>
-          <Button size={"sm"} className={"bg-accent-primary"}>
-            Google Maps
+            <MapPin className={"w-4 h-4"} /> Google Maps
           </Button>
         </div>
       </div>

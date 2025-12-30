@@ -89,7 +89,7 @@ export default function Countdown({
     <div className="w-full max-w-3xl mx-auto p-8">
       {/* Display tanggal target */}
       <div className="text-center mb-8">
-        <h3 className={"text-3xl font-allura"}>Counting The Days</h3>
+        <h3 className={"text-4xl font-allura"}>Counting The Days</h3>
       </div>
 
       {/* Countdown blocks */}

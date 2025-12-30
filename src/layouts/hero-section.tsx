@@ -24,13 +24,14 @@ export default function HeroSection() {
             </h1>
             <p>Kamis, dd mm yyyy</p>
           </div>
-          <div className={"w-[200px] aspect-square z-10"}>
+          <div className={"w-[100px] aspect-square z-10"}>
             <Image
               src={"/wayang.webp"}
               alt={"logo wayang"}
               width={400}
               height={400}
               className={"w-full object-center object-cover"}
+              priority={true}
             />
           </div>
           <div className={"space-y-2"}>

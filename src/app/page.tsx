@@ -4,6 +4,16 @@ import EventSection from "@/layouts/event-section";
 import Image from "next/image";
 import Countdown from "@/layouts/countdown";
 import GallerySection from "@/layouts/gallery-section";
+import LoveStorySection from "@/layouts/love-story-section";
+import GiftSection from "@/layouts/gift-section";
+import Footer from "@/layouts/footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Wedding Invitation Aldi Taher dan Andri Susanti",
+  description:
+    "Aduh Senangnya Pengantin Baru, Duduk melamun sambil ent** ent***an",
+};
 
 export default function Home() {
   return (
@@ -44,6 +54,9 @@ export default function Home() {
           </div>
         </div>
         <GallerySection />
+        <LoveStorySection />
+        <GiftSection />
+        <Footer />
       </main>
     </div>
   );

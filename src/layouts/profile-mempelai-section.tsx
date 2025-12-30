@@ -42,7 +42,7 @@ export default function ProfileMempelaiSection() {
 
       <div className={"space-y-6 flex flex-col text-center my-12 px-4 z-10"}>
         <div className={"space-y-2"}>
-          <h2 className={"text-2xl"}>Ar Rum: 21</h2>
+          <h2 className={"text-4xl font-allura"}>Ar Rum: 21</h2>
           <p className={"text-sm"}>
             Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan
             pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu
@@ -57,7 +57,7 @@ export default function ProfileMempelaiSection() {
             className={"space-y-4 flex flex-col justify-center items-center"}
           >
             <div
-              className={"w-[150px] aspect-[3/4] overflow-hidden rounded-full"}
+              className={"w-[200px] aspect-[3/4] overflow-hidden rounded-full"}
             >
               <Image
                 src={"/aldi.jpeg"}
@@ -93,7 +93,7 @@ export default function ProfileMempelaiSection() {
             className={"space-y-4 flex flex-col justify-center items-center"}
           >
             <div
-              className={"w-[150px] aspect-[3/4] overflow-hidden rounded-full"}
+              className={"w-[200px] aspect-[3/4] overflow-hidden rounded-full"}
             >
               <Image
                 src={"/andri.jpeg"}
