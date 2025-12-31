@@ -14,7 +14,7 @@ export default function AOSProvider({
       duration: 800, // durasi animasi (ms)
       easing: "ease-out-cubic",
       once: true, // animasi hanya sekali
-      offset: 80, // jarak trigger
+      offset: 20, // jarak trigger
     });
   }, []);
 

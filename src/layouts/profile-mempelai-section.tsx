@@ -98,7 +98,7 @@ export default function ProfileMempelaiSection() {
               data-aos={"fade-left"}
             >
               <Image
-                src={"/andri.jpeg"}
+                src={"/andri-2.jpeg"}
                 alt={"aldi"}
                 width={400}
                 height={400}
