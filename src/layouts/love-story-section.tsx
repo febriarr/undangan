@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { TypingAnimation } from "@/components/ui/typing-animation";
 
 export default function LoveStorySection() {
   return (
@@ -11,6 +10,7 @@ export default function LoveStorySection() {
       <h3 className={"text-4xl font-allura text-center"}>Love Story</h3>
       <div
         className={"space-y-4 w-full p-4 border border-input/30 rounded-2xl"}
+        data-aos="fade-up"
       >
         <Image
           src={"/couple-3.jpeg"}
@@ -22,17 +22,15 @@ export default function LoveStorySection() {
           }
         />
         <p className={"text-xl"}>Pertemuan</p>
-        <TypingAnimation
-          startOnView={true}
-          className={"text-sm"}
-          typeSpeed={30}
-        >
+        <p className={"text-sm"}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
           expedita modi neque optio quidem suscipit.
-        </TypingAnimation>
+        </p>
       </div>
       <div
         className={"space-y-4 w-full p-4 border border-input/30 rounded-2xl"}
+        data-aos="fade-zoom-in"
+        data-aos-delay={"100"}
       >
         <Image
           src={"/couple-3.jpeg"}
@@ -44,17 +42,15 @@ export default function LoveStorySection() {
           }
         />
         <p className={"text-xl"}>Lamaran</p>
-        <TypingAnimation
-          startOnView={true}
-          className={"text-sm"}
-          typeSpeed={30}
-        >
+        <p className={"text-sm"}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
           expedita modi neque optio quidem suscipit.
-        </TypingAnimation>
+        </p>
       </div>
       <div
         className={"space-y-4 w-full p-4 border border-input/30 rounded-2xl"}
+        data-aos="fade-down"
+        data-aos-delay={"200"}
       >
         <Image
           src={"/couple-3.jpeg"}
@@ -66,14 +62,10 @@ export default function LoveStorySection() {
           }
         />
         <p className={"text-xl"}>Nikah</p>
-        <TypingAnimation
-          startOnView={true}
-          className={"text-sm"}
-          typeSpeed={30}
-        >
+        <p className={"text-sm"}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
           expedita modi neque optio quidem suscipit.
-        </TypingAnimation>
+        </p>
       </div>
     </div>
   );

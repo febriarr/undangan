@@ -41,7 +41,7 @@ export default function ProfileMempelaiSection() {
       </div>
 
       <div className={"space-y-6 flex flex-col text-center my-12 px-4 z-10"}>
-        <div className={"space-y-2"}>
+        <div className={"space-y-2"} data-aos="fade-up">
           <h2 className={"text-4xl font-allura"}>Ar Rum: 21</h2>
           <p className={"text-sm"}>
             Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan
@@ -58,6 +58,7 @@ export default function ProfileMempelaiSection() {
           >
             <div
               className={"w-[200px] aspect-[3/4] overflow-hidden rounded-full"}
+              data-aos="fade-right"
             >
               <Image
                 src={"/aldi.jpeg"}
@@ -94,6 +95,7 @@ export default function ProfileMempelaiSection() {
           >
             <div
               className={"w-[200px] aspect-[3/4] overflow-hidden rounded-full"}
+              data-aos={"fade-left"}
             >
               <Image
                 src={"/andri.jpeg"}

@@ -34,7 +34,7 @@ export default function EventSection() {
           "w-full z-10 py-12 space-y-4 px-4 flex flex-col justify-center items-center"
         }
       >
-        <div className={"text-center space-y-4"}>
+        <div className={"text-center space-y-4"} data-aos={"fade-down"}>
           <h3 className={"text-3xl font-allura"}>Assalamualaikum Wr Wb</h3>
           <p className={"text-sm"}>
             Dengan segala kerendahan hati kami bermaksud ingin mengundang
@@ -46,14 +46,15 @@ export default function EventSection() {
           className={
             "w-full md:w-4/5 border-4 border-neutral-600 rounded-t-[50%] rounded-b-xl bg-black p-6 py-14 space-y-4 flex flex-col justify-center items-center text-center"
           }
+          data-aos={"fade-up"}
         >
           <h4 className={"text-3xl font-allura pb-4 border-b w-fit"}>
             Akad Nikah
           </h4>
-          <p className={"text-xl"}>Hari</p>
-          <p className={"text-4xl"}>0</p>
-          <p className={"text-lg"}>Bulan Tahun</p>
-          <p className={"text-sm"}>Jam</p>
+          <p className={"text-xl"}>Minggu</p>
+          <p className={"text-4xl"}>29</p>
+          <p className={"text-lg"}>Maret 2026</p>
+          <p className={"text-sm"}>00:00</p>
           <p className={"text-sm"}>
             <MapPin className={"w-4 h-4"} />
           </p>
@@ -70,14 +71,15 @@ export default function EventSection() {
           className={
             "w-full md:w-4/5 border-4 border-neutral-600 rounded-t-[50%] rounded-b-xl bg-black p-6 py-14 space-y-4 flex flex-col justify-center items-center text-center"
           }
+          data-aos={"fade-up"}
         >
           <h4 className={"text-3xl font-allura pb-4 border-b w-fit"}>
             Resepsi
           </h4>
-          <p className={"text-xl"}>Hari</p>
-          <p className={"text-3xl"}>0</p>
-          <p className={"text-lg"}>Bulan Tahun</p>
-          <p className={"text-sm"}>Jam</p>
+          <p className={"text-xl"}>Minggu</p>
+          <p className={"text-3xl"}>29</p>
+          <p className={"text-lg"}>Maret 2026</p>
+          <p className={"text-sm"}>18:00</p>
           <p className={"text-sm"}>
             <MapPin className={"w-4 h-4"} />
           </p>

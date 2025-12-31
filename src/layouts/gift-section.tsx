@@ -19,7 +19,7 @@ export default function GiftSection() {
           "w-full flex flex-col space-y-6 justify-center items-center z-10"
         }
       >
-        <div className={"text-center space-Y-4"}>
+        <div className={"text-center space-y-4"} data-aos="fade-up">
           <div className={"w-full mb-4 flex justify-center"}>
             <h3
               className={
@@ -38,6 +38,7 @@ export default function GiftSection() {
           className={
             "w-full bg-white text-black p-4 flex flex-col justify-center items-center rounded-xl space-y-4 "
           }
+          data-aos="fade-down"
         >
           <div className={"w-full"}>
             <div className={"w-full flex justify-between items-end mb-6"}>
@@ -70,7 +71,10 @@ export default function GiftSection() {
             <p className={"text-sm"}>Atas Nama</p>
           </div>
         </div>
-        <div className={"bg-white p-4 rounded-xl text-black"}>
+        <div
+          className={"bg-white p-4 rounded-xl text-black"}
+          data-aos="fade-up"
+        >
           <div className={"w-full flex justify-center"}>
             <Image
               src={"/gift-box.jpeg"}
