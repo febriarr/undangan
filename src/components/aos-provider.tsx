@@ -15,7 +15,10 @@ export default function AOSProvider({
       easing: "ease-out-cubic",
       once: true, // animasi hanya sekali
       offset: 20, // jarak trigger
+      anchorPlacement: "center-center",
+      mirror: true,
     });
+    AOS.refresh();
   }, []);
 
   return <>{children}</>;
