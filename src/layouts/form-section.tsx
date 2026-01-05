@@ -20,7 +20,6 @@ import { toast } from "sonner"; // atau toast library pilihan Anda
 interface Ucapan {
   id: string;
   nama: string;
-  kehadiran: string;
   ucapan: string;
   createdAt: string;
 }
@@ -41,7 +40,9 @@ export default function FormSection() {
   const fetchUcapan = async () => {
     try {
       setLoadingList(true);
-      const response = await fetch("/api/ucapan/list");
+      const response = await fetch("/api/ucapan/list", {
+        cache: "no-cache",
+      });
       const result = await response.json();
 
       if (result.success) {
@@ -67,6 +68,7 @@ export default function FormSection() {
     try {
       const response = await fetch("/api/ucapan", {
         method: "POST",
+        cache: "no-store",
         headers: {
           "Content-Type": "application/json",
         },
