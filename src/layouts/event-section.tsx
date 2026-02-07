@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function EventSection() {
   return (
@@ -67,8 +68,11 @@ export default function EventSection() {
           <Button
             size={"sm"}
             className={"bg-accent-primary hover:bg-accent-primary/90"}
+            asChild={true}
           >
-            <MapPin className={"w-4 h-4"} /> Google Maps
+            <Link href={"https://maps.app.goo.gl/q9hk7UPuMULtMpdS8?g_st=iw"}>
+              <MapPin className={"w-4 h-4"} /> Google Maps
+            </Link>
           </Button>
         </div>
         <div
@@ -96,8 +100,11 @@ export default function EventSection() {
           <Button
             size={"sm"}
             className={"bg-accent-primary hover:bg-accent-primary/90"}
+            asChild={true}
           >
-            <MapPin className={"w-4 h-4"} /> Google Maps
+            <Link href={"https://maps.app.goo.gl/q9hk7UPuMULtMpdS8?g_st=iw"}>
+              <MapPin className={"w-4 h-4"} /> Google Maps
+            </Link>
           </Button>
         </div>
       </div>
