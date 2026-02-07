@@ -64,7 +64,10 @@ export default function EventSection() {
             <br />
             (Gudang Karka Selatan STP)
           </p>
-          <Button size={"sm"} className={"bg-accent-primary"}>
+          <Button
+            size={"sm"}
+            className={"bg-accent-primary hover:bg-accent-primary/90"}
+          >
             <MapPin className={"w-4 h-4"} /> Google Maps
           </Button>
         </div>
@@ -90,7 +93,10 @@ export default function EventSection() {
             <br />
             (Gudang Karka Selatan STP)
           </p>
-          <Button size={"sm"} className={"bg-accent-primary"}>
+          <Button
+            size={"sm"}
+            className={"bg-accent-primary hover:bg-accent-primary/90"}
+          >
             <MapPin className={"w-4 h-4"} /> Google Maps
           </Button>
         </div>
