@@ -14,11 +14,21 @@ export default function AOSProvider({
       duration: 800, // durasi animasi (ms)
       easing: "ease-out-cubic",
       once: true, // animasi hanya sekali
-      offset: 20, // jarak trigger
-      anchorPlacement: "center-center",
-      mirror: true,
+      offset: 120, // jarak trigger
+      anchorPlacement: "top-bottom",
+      mirror: false,
     });
+    const handleRefresh = () => {
+      AOS.refreshHard();
+    };
     AOS.refresh();
+    window.addEventListener("load", handleRefresh);
+    window.addEventListener("resize", handleRefresh);
+
+    return () => {
+      window.removeEventListener("load", handleRefresh);
+      window.removeEventListener("resize", handleRefresh);
+    };
   }, []);
 
   return <>{children}</>;

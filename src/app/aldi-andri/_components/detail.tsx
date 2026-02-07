@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import Image from "next/image";
+import AOS from "aos";
 
 import HeroSection from "@/layouts/hero-section";
 import ProfileMempelaiSection from "@/layouts/profile-mempelai-section";
@@ -28,7 +29,7 @@ export default function DetailPage() {
   const firstSectionRef = useRef<HTMLDivElement | null>(null);
 
   /**
-   * 🔒 LOCK SCROLL sebelum undangan dibuka
+   *  LOCK SCROLL sebelum undangan dibuka
    */
   useEffect(() => {
     document.body.style.overflow = isOpen ? "auto" : "hidden";
@@ -41,7 +42,7 @@ export default function DetailPage() {
   }, [isOpen]);
 
   /**
-   * 📜 AUTO SCROLL setelah buka undangan
+   *  AUTO SCROLL setelah buka undangan
    */
   useEffect(() => {
     if (isOpen && firstSectionRef.current) {
@@ -54,8 +55,16 @@ export default function DetailPage() {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const timeout = window.setTimeout(() => {
+      AOS.refreshHard();
+    }, 300);
+    return () => window.clearTimeout(timeout);
+  }, [isOpen]);
+
   /**
-   * ▶️ OPEN INVITATION
+   * ️ OPEN INVITATION
    */
   const handleOpenInvitation = () => {
     if (audioRef.current) {
@@ -69,7 +78,7 @@ export default function DetailPage() {
   };
 
   /**
-   * 🔊 TOGGLE MUSIC
+   *  TOGGLE MUSIC
    */
   const toggleMusic = () => {
     if (!audioRef.current) return;
@@ -84,12 +93,12 @@ export default function DetailPage() {
 
   return (
     <div className="min-h-screen bg-black text-white font-google-sans">
-      {/* 🎵 AUDIO */}
+      {/*  AUDIO */}
       <audio ref={audioRef} loop preload="auto">
         <source src="/lagu-jorok.mp3" type="audio/mpeg" />
       </audio>
 
-      {/* 🔊 MUSIC BUTTON */}
+      {/*  MUSIC BUTTON */}
       {isOpen && (
         <Button
           onClick={toggleMusic}
@@ -117,11 +126,23 @@ export default function DetailPage() {
           <EventSection />
 
           <div className="text-center">
-            <Image src="/divider.webp" alt="divider" width={400} height={400} />
+            <Image
+              src="/divider.webp"
+              alt="divider"
+              width={400}
+              height={400}
+              className={"w-full"}
+            />
             <div className="my-6 px-4">
               <Countdown targetDate="29 maret 2026" targetTime="06:00" />
             </div>
-            <Image src="/divider.webp" alt="divider" width={400} height={400} />
+            <Image
+              src="/divider.webp"
+              alt="divider"
+              width={400}
+              height={400}
+              className={"w-full"}
+            />
           </div>
 
           <GallerySection />

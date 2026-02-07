@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ProfileMempelaiSection() {
   return (
@@ -19,7 +20,7 @@ export default function ProfileMempelaiSection() {
           className={"w-full h-full object-cover"}
         />
       </div>
-      <div className={"absolute top-[20%] rotate-45 -left-20 w-[200px] -z-0"}>
+      <div className={"absolute top-[20%] rotate-45 -left-20 w-50 z-0"}>
         <Image
           src={"/flower.webp"}
           alt={"divider"}
@@ -28,9 +29,7 @@ export default function ProfileMempelaiSection() {
           className={"w-full h-full object-cover"}
         />
       </div>
-      <div
-        className={"absolute bottom-[20%] -rotate-45 -right-20 w-[200px] -z-0"}
-      >
+      <div className={"absolute bottom-[20%] -rotate-45 -right-20 w-50 z-0"}>
         <Image
           src={"/flower.webp"}
           alt={"divider"}
@@ -57,7 +56,7 @@ export default function ProfileMempelaiSection() {
             className={"space-y-4 flex flex-col justify-center items-center"}
           >
             <div
-              className={"w-[200px] aspect-[3/4] overflow-hidden rounded-full"}
+              className={"w-50 aspect-3/4 overflow-hidden rounded-full"}
               data-aos="fade-right"
             >
               <Image
@@ -68,25 +67,33 @@ export default function ProfileMempelaiSection() {
                 className={"w-full h-full object-cover"}
               />
             </div>
-            <h3 className={"text-3xl font-allura"}>Aldi Taher</h3>
+            <h3 className={"text-3xl font-allura"}>Aldi Pratama</h3>
             <p className={"text-sm"}>
-              Anak Dari
+              Putra Dari
               <br />
-              Bapak Lorem & Ipsum
+              Bapak Nasipi & Ibu Asmiyah
             </p>
             <Button
               variant={"outline"}
               size={"sm"}
               className={"bg-transparent border-white"}
+              asChild={true}
             >
-              <Image
-                src={"/instagram.svg"}
-                alt={"ig"}
-                width={20}
-                height={20}
-                unoptimized={true}
-              />
-              Instagram
+              <Link
+                href={
+                  "https://www.instagram.com/pratamaaldi9?igsh=MWJlbDR4c2RmOXRrMw=="
+                }
+                target={"_blank"}
+              >
+                <Image
+                  src={"/instagram.svg"}
+                  alt={"ig"}
+                  width={20}
+                  height={20}
+                  unoptimized={true}
+                />
+                Instagram
+              </Link>
             </Button>
           </div>
           <p className={"text-3xl font-allura"}>&</p>
@@ -94,7 +101,7 @@ export default function ProfileMempelaiSection() {
             className={"space-y-4 flex flex-col justify-center items-center"}
           >
             <div
-              className={"w-[200px] aspect-[3/4] overflow-hidden rounded-full"}
+              className={"w-50 aspect-3/4 overflow-hidden rounded-full"}
               data-aos={"fade-left"}
             >
               <Image
@@ -105,25 +112,33 @@ export default function ProfileMempelaiSection() {
                 className={"w-full h-full object-cover"}
               />
             </div>
-            <h3 className={"text-3xl font-allura"}>Andri Susanti</h3>
+            <h3 className={"text-3xl font-allura"}>Andriana Amaliyah Samsi</h3>
             <p className={"text-sm"}>
-              Anak Dari
+              Puri Dari
               <br />
-              Bapak Lorem & Ipsum
+              Bapak Soehendro & Ibu Sa{"'"}ana
             </p>
             <Button
               variant={"outline"}
               size={"sm"}
               className={"bg-transparent border-white"}
+              asChild={true}
             >
-              <Image
-                src={"/instagram.svg"}
-                alt={"ig"}
-                width={20}
-                height={20}
-                unoptimized={true}
-              />
-              Instagram
+              <Link
+                href={
+                  "https://www.instagram.com/euandriiaana?igsh=cnJiYjUzZDQ2cHY4"
+                }
+                target={"_blank"}
+              >
+                <Image
+                  src={"/instagram.svg"}
+                  alt={"ig"}
+                  width={20}
+                  height={20}
+                  unoptimized={true}
+                />
+                Instagram
+              </Link>
             </Button>
           </div>
         </div>

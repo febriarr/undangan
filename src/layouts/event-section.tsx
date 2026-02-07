@@ -11,7 +11,7 @@ export default function EventSection() {
         "flex flex-col space-y-4 justify-center items-center relative min-h-screen w-full"
       }
     >
-      <div className={"w-full h-full -z-0 absolute inset-0"}>
+      <div className={"w-full h-full z-0 absolute inset-0"}>
         <Image
           src={"/bg-night.webp"}
           alt={"background"}
@@ -20,7 +20,7 @@ export default function EventSection() {
           height={400}
         />
       </div>
-      <div className={"w-full h-full -z-0 absolute top-0"}>
+      <div className={"w-full h-full z-0 absolute top-0"}>
         <Image
           src={"/bg-joglo-with-tree-transparent.webp"}
           alt={"background"}
@@ -54,14 +54,15 @@ export default function EventSection() {
           <p className={"text-xl"}>Minggu</p>
           <p className={"text-4xl"}>29</p>
           <p className={"text-lg"}>Maret 2026</p>
-          <p className={"text-sm"}>00:00</p>
+          <p className={"text-sm"}>09:00</p>
           <p className={"text-sm"}>
             <MapPin className={"w-4 h-4"} />
           </p>
-          <p className={"text-sm"}>Kediaman Mempelai pria/wanita</p>
+          <p className={"text-sm"}>Kediaman Mempelai wanita</p>
           <p className={"text-sm"}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
-            perspiciatis quaerat tempore!
+            Jl.Gatot Subroto, Kampung Baru, Bulusan
+            <br />
+            (Gudang Karka Selatan STP)
           </p>
           <Button size={"sm"} className={"bg-accent-primary"}>
             <MapPin className={"w-4 h-4"} /> Google Maps
@@ -83,10 +84,11 @@ export default function EventSection() {
           <p className={"text-sm"}>
             <MapPin className={"w-4 h-4"} />
           </p>
-          <p className={"text-sm"}>Kediaman Mempelai pria/wanita</p>
+          <p className={"text-sm"}>Kediaman Mempelai wanita</p>
           <p className={"text-sm"}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
-            perspiciatis quaerat tempore!
+            Jl.Gatot Subroto, Kampung Baru, Bulusan
+            <br />
+            (Gudang Karka Selatan STP)
           </p>
           <Button size={"sm"} className={"bg-accent-primary"}>
             <MapPin className={"w-4 h-4"} /> Google Maps
