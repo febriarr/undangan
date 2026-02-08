@@ -70,7 +70,10 @@ export default function EventSection() {
             className={"bg-accent-primary hover:bg-accent-primary/90"}
             asChild={true}
           >
-            <Link href={"https://maps.app.goo.gl/q9hk7UPuMULtMpdS8?g_st=iw"}>
+            <Link
+              href={"https://maps.app.goo.gl/q9hk7UPuMULtMpdS8?g_st=iw"}
+              target={"_blank"}
+            >
               <MapPin className={"w-4 h-4"} /> Google Maps
             </Link>
           </Button>
@@ -102,7 +105,10 @@ export default function EventSection() {
             className={"bg-accent-primary hover:bg-accent-primary/90"}
             asChild={true}
           >
-            <Link href={"https://maps.app.goo.gl/q9hk7UPuMULtMpdS8?g_st=iw"}>
+            <Link
+              href={"https://maps.app.goo.gl/q9hk7UPuMULtMpdS8?g_st=iw"}
+              target={"_blank"}
+            >
               <MapPin className={"w-4 h-4"} /> Google Maps
             </Link>
           </Button>
