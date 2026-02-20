@@ -95,7 +95,7 @@ export default function DetailPage() {
     <div className="min-h-screen bg-black text-white font-google-sans">
       {/*  AUDIO */}
       <audio ref={audioRef} loop preload="auto">
-        <source src="/lagu-jorok.mp3" type="audio/mpeg" />
+        <source src="/lagu-fix.mp3" type="audio/mpeg" />
       </audio>
 
       {/*  MUSIC BUTTON */}

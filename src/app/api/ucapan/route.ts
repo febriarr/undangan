@@ -1,4 +1,3 @@
-// app/api/ucapan/route.ts
 import { db } from "@/lib/firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { NextRequest, NextResponse } from "next/server";
@@ -8,7 +7,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { nama, kehadiran, ucapan } = body;
 
-    // Validasi input
     if (!nama || !kehadiran || !ucapan) {
       return NextResponse.json(
         { error: "Semua field harus diisi" },
@@ -16,7 +14,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Tambahkan data ke Firestore
     const docRef = await addDoc(collection(db, "ucapan"), {
       nama,
       kehadiran,

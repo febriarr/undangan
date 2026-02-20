@@ -1,4 +1,3 @@
-// app/api/ucapan/list/route.ts
 import { db } from "@/lib/firebase";
 import { collection, query, orderBy, getDocs, limit } from "firebase/firestore";
 import { NextRequest, NextResponse } from "next/server";
@@ -8,7 +7,6 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const limitParam = searchParams.get("limit") || "50";
 
-    // Query Firestore
     const q = query(
       collection(db, "ucapan"),
       orderBy("createdAt", "desc"),
