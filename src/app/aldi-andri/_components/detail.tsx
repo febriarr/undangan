@@ -145,8 +145,6 @@ export default function DetailPage() {
             />
           </div>
 
-          <GallerySection />
-          <LoveStorySection />
           <GiftSection />
           <FormSection />
           <CloseSection />

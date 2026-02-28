@@ -52,8 +52,8 @@ export default function GiftSection() {
                 />
               </div>
             </div>
-            <p className={"text-sm"}>No rek: 12345678</p>
-            <p className={"text-sm"}>Atas Nama</p>
+            <p className={"text-sm"}>No rek: 14300270396338</p>
+            <p className={"text-sm"}>Atas Nama ALDI PRATAMA</p>
           </div>
           <div className={"w-full "}>
             <div className={"w-full flex justify-between items-center"}>
@@ -67,8 +67,8 @@ export default function GiftSection() {
                 />
               </div>
             </div>
-            <p className={"text-sm"}>No rek: 12345678</p>
-            <p className={"text-sm"}>Atas Nama</p>
+            <p className={"text-sm"}>No rek: 1801182904</p>
+            <p className={"text-sm"}>ANDRIANA AMALIYAH SAMSI</p>
           </div>
         </div>
         <div
