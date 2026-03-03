@@ -3,9 +3,8 @@ import DetailPage from "@/app/aldi-andri/_components/detail";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Wedding Invitation Aldi Taher dan Andri Susanti",
-  description:
-    "Aduh Senangnya Pengantin Baru, Duduk melamun sambil ent** ent***an",
+  title: "Wedding Invitation Aldi Pratama dan Andrianna Amalia Samsi",
+  description: "Undangan Pernikahan Aldi Pratama dan Andrianna Amalia Samsi",
 };
 export default function AldiAndriPage() {
   return (
