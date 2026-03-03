@@ -71,24 +71,7 @@ export default function GiftSection() {
             <p className={"text-sm"}>ANDRIANA AMALIYAH SAMSI</p>
           </div>
         </div>
-        <div
-          className={"bg-white p-4 rounded-xl text-black"}
-          data-aos="fade-up"
-        >
-          <div className={"w-full flex justify-center"}>
-            <Image
-              src={"/gift-box.jpeg"}
-              alt={"logo mandiri"}
-              width={400}
-              height={400}
-            />
-          </div>
-          <p className={"text-sm"}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
-            fugiat hic minus, mollitia nobis quo?
-          </p>
-          <p className={"text-sm"}>Atas Nama: lorem ipsum</p>
-        </div>
+
         <p className={"text-sm text-center"}>
           Mohon untuk memastikan rekening atau alamat kado sudah sesuai, sebelum
           anda mengirimkan hadiah. Jika ada ragu jangan sungkan untuk menanyakan

@@ -90,7 +90,7 @@ export default function EventSection() {
           <p className={"text-xl"}>Minggu</p>
           <p className={"text-3xl"}>29</p>
           <p className={"text-lg"}>Maret 2026</p>
-          <p className={"text-sm"}>18:00</p>
+          <p className={"text-sm"}>Bebas</p>
           <p className={"text-sm"}>
             <MapPin className={"w-4 h-4"} />
           </p>
