@@ -110,7 +110,7 @@ export default function ProfileMempelaiSection() {
                 className={"w-full h-full object-cover"}
               />
             </div>
-            <h3 className={"text-3xl font-allura"}>Andriana Amaliyah Samsi</h3>
+            <h3 className={"text-3xl font-allura"}>Andriana Amaliyah S</h3>
             <p className={"text-sm"}>
               Puri Dari
               <br />

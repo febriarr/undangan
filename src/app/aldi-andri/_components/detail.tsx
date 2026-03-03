@@ -67,11 +67,23 @@ export default function DetailPage() {
    * ️ OPEN INVITATION
    */
   const handleOpenInvitation = () => {
-    if (audioRef.current) {
-      audioRef.current
+    if (!audioRef.current) return;
+
+    const audio = audioRef.current;
+
+    const playFromReff = () => {
+      audio.currentTime = 39; // detik reff
+      audio
         .play()
         .then(() => setIsPlaying(true))
         .catch(() => setIsPlaying(false));
+    };
+
+    if (audio.readyState >= 1) {
+      // metadata sudah ada
+      playFromReff();
+    } else {
+      audio.addEventListener("loadedmetadata", playFromReff, { once: true });
     }
 
     setIsOpen(true);
@@ -95,7 +107,7 @@ export default function DetailPage() {
     <div className="min-h-screen bg-black text-white font-google-sans">
       {/*  AUDIO */}
       <audio ref={audioRef} loop preload="auto">
-        <source src="/lagu-fix.mp3" type="audio/mpeg" />
+        <source src="/beautiful-in-white.mp3" type="audio/mpeg" />
       </audio>
 
       {/*  MUSIC BUTTON */}

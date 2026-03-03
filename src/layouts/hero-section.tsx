@@ -35,7 +35,7 @@ export default function HeroSection({
         <h1 className="text-4xl font-allura">
           Aldi Pratama
           <br />&<br />
-          Andri Amaliyah Samsi
+          Andriana Amaliyah S
         </h1>
 
         <p>Kamis, 29 Maret 2026</p>

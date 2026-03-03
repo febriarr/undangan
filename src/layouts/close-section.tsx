@@ -20,7 +20,7 @@ export default function CloseSection() {
         <p className={"text-sm"}>Hormat Kami</p>
         <h3 className={"text-4xl font-allura"}>
           Aldi Pratama
-          <br />& <br /> Andri Amaliyah Samsi
+          <br />& <br /> Andriana Amaliyah S
         </h3>
         <h3 className={"text-3xl font-allura"}>Wassalamualaikum Wr Wb</h3>
       </div>

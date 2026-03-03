@@ -1,8 +1,19 @@
 "use client";
 
 import Image from "next/image";
+import { toast } from "sonner";
+import { Copy } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function GiftSection() {
+  const handleCopy = (text: string) => {
+    try {
+      navigator.clipboard.writeText(text);
+      toast.success("Berhasil Copy");
+    } catch (error: any) {
+      toast.error(error.message);
+    }
+  };
   return (
     <div className={"flex justify-center items-center px-4 py-16 relative"}>
       <div className={"absolute flex items-center w-full h-full -z-0 inset-0"}>
@@ -52,7 +63,18 @@ export default function GiftSection() {
                 />
               </div>
             </div>
-            <p className={"text-sm"}>No rek: 14300270396338</p>
+            <div className={"flex space-x-2 items-center"}>
+              <p className={"text-sm"}>
+                No rek: <span className={"font-semibold"}>14300270396338</span>
+              </p>
+              <button
+                onClick={() => handleCopy("14300270396338")}
+                type={"button"}
+              >
+                <Copy className={"w-4 h-4"} />
+              </button>
+            </div>
+
             <p className={"text-sm"}>Atas Nama ALDI PRATAMA</p>
           </div>
           <div className={"w-full "}>
@@ -67,7 +89,15 @@ export default function GiftSection() {
                 />
               </div>
             </div>
-            <p className={"text-sm"}>No rek: 1801182904</p>
+            <div className={"flex space-x-2 items-center"}>
+              <p className={"text-sm"}>
+                No rek: <span className={"font-semibold"}>1801182904</span>
+              </p>
+              <button onClick={() => handleCopy("1801182904")} type={"button"}>
+                <Copy className={"w-4 h-4"} />
+              </button>
+            </div>
+
             <p className={"text-sm"}>ANDRIANA AMALIYAH SAMSI</p>
           </div>
         </div>
