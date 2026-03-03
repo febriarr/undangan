@@ -56,14 +56,13 @@ export default function ProfileMempelaiSection() {
             className={"space-y-4 flex flex-col justify-center items-center"}
           >
             <div
-              className={"w-50 aspect-3/4 overflow-hidden rounded-full"}
+              className={"w-30 aspect-square overflow-hidden "}
               data-aos="fade-right"
             >
               <Image
-                src={"/aldi.jpeg"}
-                alt={"aldi"}
-                width={400}
-                height={400}
+                src={"/wedding-rings.png"}
+                alt={"wedding"}
+                fill
                 className={"w-full h-full object-cover"}
               />
             </div>
@@ -101,14 +100,13 @@ export default function ProfileMempelaiSection() {
             className={"space-y-4 flex flex-col justify-center items-center"}
           >
             <div
-              className={"w-50 aspect-3/4 overflow-hidden rounded-full"}
+              className={"w-30 aspect-square overflow-hidden "}
               data-aos={"fade-left"}
             >
               <Image
-                src={"/andri-2.jpeg"}
-                alt={"aldi"}
-                width={400}
-                height={400}
+                src={"/wedding-rings.png"}
+                alt={"wedding"}
+                fill
                 className={"w-full h-full object-cover"}
               />
             </div>
