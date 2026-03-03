@@ -33,9 +33,9 @@ export default function HeroSection({
         <p>The Wedding Of</p>
 
         <h1 className="text-4xl font-allura">
-          Aldi Taher
+          Aldi Pratama
           <br />&<br />
-          Andri Susanti
+          Andri Amaliyah Samsi
         </h1>
 
         <p>Kamis, dd mm yyyy</p>
