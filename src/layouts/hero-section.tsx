@@ -38,7 +38,7 @@ export default function HeroSection({
           Andri Amaliyah Samsi
         </h1>
 
-        <p>Kamis, dd mm yyyy</p>
+        <p>Kamis, 29 Maret 2026</p>
 
         <div className="w-[100px] mx-auto">
           <Image
