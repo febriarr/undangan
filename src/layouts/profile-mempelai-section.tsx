@@ -112,7 +112,7 @@ export default function ProfileMempelaiSection() {
             </div>
             <h3 className={"text-3xl font-allura"}>Andriana Amaliyah S</h3>
             <p className={"text-sm"}>
-              Puri Dari
+              Putri Dari
               <br />
               Bapak Soehendro & Ibu Sa{"'"}ana
             </p>
