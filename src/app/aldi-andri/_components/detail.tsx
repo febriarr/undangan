@@ -22,6 +22,14 @@ export default function DetailPage() {
   const params = useSearchParams();
   const namaTamu = params.get("to");
 
+  const formatName = (name: string) => {
+    return name
+      .replace(/[-_]/g, " ")
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
   const [isOpen, setIsOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -123,7 +131,7 @@ export default function DetailPage() {
 
       {/* HERO */}
       <HeroSection
-        to={namaTamu ?? "Anda"}
+        to={formatName(namaTamu ?? "Anda")}
         isOpen={isOpen}
         onOpenInvitation={handleOpenInvitation}
       />
