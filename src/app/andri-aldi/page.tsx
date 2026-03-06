@@ -47,6 +47,7 @@ export default function AndriAldiPage() {
       targetDate: "29 maret 2026",
       targetTime: "09:00",
     },
+    direction: "reverse",
   };
 
   return (

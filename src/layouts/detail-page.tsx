@@ -23,12 +23,14 @@ export type DetailPageProps = {
     targetDate: string;
     targetTime: string;
   };
+  direction?: "normal" | "reverse";
 };
 
 export default function DetailPage({
   heroSection,
   eventSection,
   countdownSection,
+  direction,
 }: DetailPageProps) {
   const params = useSearchParams();
   const namaTamu = params.get("to");
@@ -146,6 +148,7 @@ export default function DetailPage({
         isOpen={isOpen}
         onOpenInvitation={handleOpenInvitation}
         date={heroSection.date}
+        direction={direction}
       />
 
       {/* CONTENT */}

@@ -9,6 +9,7 @@ type HeroSectionProps = {
   onOpenInvitation: () => void;
   isOpen: boolean;
   date: string;
+  direction?: "normal" | "reverse";
 };
 
 export default function HeroSection({
@@ -16,16 +17,15 @@ export default function HeroSection({
   onOpenInvitation,
   isOpen,
   date,
+  direction = "normal",
 }: HeroSectionProps) {
   return (
     <section
       className={clsx(
         "w-full min-h-screen flex justify-center items-center relative",
         {
-          // sebelum dibuka → FIXED
           "fixed inset-0 z-50": !isOpen,
 
-          // setelah dibuka → NORMAL FLOW (STATIC)
           "relative z-auto": isOpen,
         },
       )}
@@ -34,15 +34,17 @@ export default function HeroSection({
       <div className="z-10 text-center space-y-4 px-4">
         <p>The Wedding Of</p>
 
-        <h1 className="text-4xl font-allura">
-          Aldi Pratama
-          <br />&<br />
-          Andriana Amaliyah S
-        </h1>
+        <div
+          className={`flex gap-4 ${direction === "normal" ? "flex-col" : "flex-col-reverse"}`}
+        >
+          <h1 className="text-4xl font-allura">Aldi Pratamas</h1>
+          <span className={"text-4xl font-allura"}>&</span>
+          <h1 className="text-4xl font-allura">Andriana Amaliyah S</h1>
+        </div>
 
         <p>{date}</p>
 
-        <div className="w-[100px] mx-auto">
+        <div className="w-25 mx-auto">
           <Image
             src="/wayang.webp"
             alt="wayang"
