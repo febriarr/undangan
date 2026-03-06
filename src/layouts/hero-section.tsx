@@ -37,7 +37,7 @@ export default function HeroSection({
         <div
           className={`flex gap-4 ${direction === "normal" ? "flex-col" : "flex-col-reverse"}`}
         >
-          <h1 className="text-4xl font-allura">Aldi Pratamas</h1>
+          <h1 className="text-4xl font-allura">Aldi Pratama</h1>
           <span className={"text-4xl font-allura"}>&</span>
           <h1 className="text-4xl font-allura">Andriana Amaliyah S</h1>
         </div>
