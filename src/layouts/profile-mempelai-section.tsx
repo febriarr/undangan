@@ -4,7 +4,11 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function ProfileMempelaiSection() {
+export default function ProfileMempelaiSection({
+  direction = "normal",
+}: {
+  direction?: "normal" | "reverse";
+}) {
   return (
     <div
       className={
@@ -53,91 +57,95 @@ export default function ProfileMempelaiSection() {
         <div className={"my-4 space-y-4"}>
           <h3 className={"text-2xl"}>The Couple</h3>
           <div
-            className={"space-y-4 flex flex-col justify-center items-center"}
+            className={`flex gap-4 ${direction === "normal" ? "flex-col" : "flex-col-reverse"}`}
           >
             <div
-              className={"w-30 aspect-square overflow-hidden "}
-              data-aos="fade-right"
+              className={"space-y-4 flex flex-col justify-center items-center"}
             >
-              <Image
-                src={"/wedding-rings.png"}
-                alt={"wedding"}
-                fill
-                className={"w-full h-full object-cover"}
-              />
-            </div>
-            <h3 className={"text-3xl font-allura"}>Aldi Pratama</h3>
-            <p className={"text-sm"}>
-              Putra Dari
-              <br />
-              Bapak Nasipi & Ibu Asmiyah
-            </p>
-            <Button
-              variant={"outline"}
-              size={"sm"}
-              className={"bg-transparent border-white"}
-              asChild={true}
-            >
-              <Link
-                href={
-                  "https://www.instagram.com/pratamaaldi9?igsh=MWJlbDR4c2RmOXRrMw=="
-                }
-                target={"_blank"}
+              <div
+                className={"w-30 aspect-square overflow-hidden "}
+                data-aos="fade-right"
               >
                 <Image
-                  src={"/instagram.svg"}
-                  alt={"ig"}
-                  width={20}
-                  height={20}
-                  unoptimized={true}
+                  src={"/wedding-rings.png"}
+                  alt={"wedding"}
+                  fill
+                  className={"w-full h-full object-cover"}
                 />
-                Instagram
-              </Link>
-            </Button>
-          </div>
-          <p className={"text-3xl font-allura"}>&</p>
-          <div
-            className={"space-y-4 flex flex-col justify-center items-center"}
-          >
+              </div>
+              <h3 className={"text-3xl font-allura"}>Aldi Pratama</h3>
+              <p className={"text-sm"}>
+                Putra Dari
+                <br />
+                Bapak Nasipi & Ibu Asmiyah
+              </p>
+              <Button
+                variant={"outline"}
+                size={"sm"}
+                className={"bg-transparent border-white"}
+                asChild={true}
+              >
+                <Link
+                  href={
+                    "https://www.instagram.com/pratamaaldi9?igsh=MWJlbDR4c2RmOXRrMw=="
+                  }
+                  target={"_blank"}
+                >
+                  <Image
+                    src={"/instagram.svg"}
+                    alt={"ig"}
+                    width={20}
+                    height={20}
+                    unoptimized={true}
+                  />
+                  Instagram
+                </Link>
+              </Button>
+            </div>
+            <p className={"text-3xl font-allura"}>&</p>
             <div
-              className={"w-30 aspect-square overflow-hidden "}
-              data-aos={"fade-left"}
+              className={"space-y-4 flex flex-col justify-center items-center"}
             >
-              <Image
-                src={"/wedding-rings.png"}
-                alt={"wedding"}
-                fill
-                className={"w-full h-full object-cover"}
-              />
-            </div>
-            <h3 className={"text-3xl font-allura"}>Andriana Amaliyah S</h3>
-            <p className={"text-sm"}>
-              Putri Dari
-              <br />
-              Bapak Soehendro & Ibu Sa{"'"}ana
-            </p>
-            <Button
-              variant={"outline"}
-              size={"sm"}
-              className={"bg-transparent border-white"}
-              asChild={true}
-            >
-              <Link
-                href={
-                  "https://www.instagram.com/euandriiaana?igsh=cnJiYjUzZDQ2cHY4"
-                }
-                target={"_blank"}
+              <div
+                className={"w-30 aspect-square overflow-hidden "}
+                data-aos={"fade-left"}
               >
                 <Image
-                  src={"/instagram.svg"}
-                  alt={"ig"}
-                  width={20}
-                  height={20}
-                  unoptimized={true}
+                  src={"/wedding-rings.png"}
+                  alt={"wedding"}
+                  fill
+                  className={"w-full h-full object-cover"}
                 />
-                Instagram
-              </Link>
-            </Button>
+              </div>
+              <h3 className={"text-3xl font-allura"}>Andriana Amaliyah S</h3>
+              <p className={"text-sm"}>
+                Putri Dari
+                <br />
+                Bapak Soehendro & Ibu Sa{"'"}ana
+              </p>
+              <Button
+                variant={"outline"}
+                size={"sm"}
+                className={"bg-transparent border-white"}
+                asChild={true}
+              >
+                <Link
+                  href={
+                    "https://www.instagram.com/euandriiaana?igsh=cnJiYjUzZDQ2cHY4"
+                  }
+                  target={"_blank"}
+                >
+                  <Image
+                    src={"/instagram.svg"}
+                    alt={"ig"}
+                    width={20}
+                    height={20}
+                    unoptimized={true}
+                  />
+                  Instagram
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

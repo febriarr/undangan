@@ -155,7 +155,7 @@ export default function DetailPage({
       {isOpen && (
         <main className="max-w-xl mx-auto flex flex-col">
           <div ref={firstSectionRef}>
-            <ProfileMempelaiSection />
+            <ProfileMempelaiSection direction={direction} />
           </div>
 
           <EventSection {...eventSection} />
