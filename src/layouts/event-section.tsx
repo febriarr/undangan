@@ -5,7 +5,31 @@ import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import Link from "next/link";
 
-export default function EventSection() {
+export type DetailDate = {
+  day: string;
+  date: string;
+  month: string;
+  time: string;
+  address: {
+    street: string;
+    detail: string;
+    linkMap: string;
+  };
+};
+
+export type EventSectionProps = {
+  reception: DetailDate;
+  marriageCovenant: DetailDate;
+  bride: string;
+  event?: string;
+};
+
+export default function EventSection({
+  reception,
+  marriageCovenant,
+  bride,
+  event = "Resepsi",
+}: EventSectionProps) {
   return (
     <div
       className={
@@ -52,28 +76,25 @@ export default function EventSection() {
           <h4 className={"text-3xl font-allura pb-4 border-b w-fit"}>
             Akad Nikah
           </h4>
-          <p className={"text-xl"}>Minggu</p>
-          <p className={"text-4xl"}>29</p>
-          <p className={"text-lg"}>Maret 2026</p>
-          <p className={"text-sm"}>09:00</p>
+          <p className={"text-xl"}>{marriageCovenant.day}</p>
+          <p className={"text-4xl"}>{marriageCovenant.date}</p>
+          <p className={"text-lg"}>{marriageCovenant.month}</p>
+          <p className={"text-sm"}>{marriageCovenant.time}</p>
           <p className={"text-sm"}>
             <MapPin className={"w-4 h-4"} />
           </p>
-          <p className={"text-sm"}>Kediaman Mempelai wanita</p>
+          <p className={"text-sm"}>Kediaman Mempelai {bride}</p>
           <p className={"text-sm"}>
-            Jl.Gatot Subroto, Kampung Baru, Bulusan
+            {marriageCovenant.address.street}
             <br />
-            (Gudang Karka Selatan STP)
+            {marriageCovenant.address.detail}
           </p>
           <Button
             size={"sm"}
             className={"bg-accent-primary hover:bg-accent-primary/90"}
             asChild={true}
           >
-            <Link
-              href={"https://maps.app.goo.gl/q9hk7UPuMULtMpdS8?g_st=iw"}
-              target={"_blank"}
-            >
+            <Link href={marriageCovenant.address.linkMap} target={"_blank"}>
               <MapPin className={"w-4 h-4"} /> Google Maps
             </Link>
           </Button>
@@ -85,30 +106,27 @@ export default function EventSection() {
           data-aos={"fade-up"}
         >
           <h4 className={"text-3xl font-allura pb-4 border-b w-fit"}>
-            Resepsi
+            {event}
           </h4>
-          <p className={"text-xl"}>Minggu</p>
-          <p className={"text-3xl"}>29</p>
-          <p className={"text-lg"}>Maret 2026</p>
-          <p className={"text-sm"}>18:00</p>
+          <p className={"text-xl"}>{reception.day}</p>
+          <p className={"text-3xl"}>{reception.date}</p>
+          <p className={"text-lg"}>{reception.month}</p>
+          <p className={"text-sm"}>{reception.time}</p>
           <p className={"text-sm"}>
             <MapPin className={"w-4 h-4"} />
           </p>
-          <p className={"text-sm"}>Kediaman Mempelai wanita</p>
+          <p className={"text-sm"}>Kediaman Mempelai {bride}</p>
           <p className={"text-sm"}>
-            Jl.Gatot Subroto, Kampung Baru, Bulusan
+            {reception.address.street}
             <br />
-            (Gudang Karka Selatan STP)
+            {reception.address.detail}
           </p>
           <Button
             size={"sm"}
             className={"bg-accent-primary hover:bg-accent-primary/90"}
             asChild={true}
           >
-            <Link
-              href={"https://maps.app.goo.gl/q9hk7UPuMULtMpdS8?g_st=iw"}
-              target={"_blank"}
-            >
+            <Link href={reception.address.linkMap} target={"_blank"}>
               <MapPin className={"w-4 h-4"} /> Google Maps
             </Link>
           </Button>
@@ -117,3 +135,5 @@ export default function EventSection() {
     </div>
   );
 }
+
+export const addressAndri = "https://maps.app.goo.gl/q9hk7UPuMULtMpdS8?g_st=iw";

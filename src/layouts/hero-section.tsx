@@ -8,12 +8,14 @@ type HeroSectionProps = {
   to?: string;
   onOpenInvitation: () => void;
   isOpen: boolean;
+  date: string;
 };
 
 export default function HeroSection({
   to,
   onOpenInvitation,
   isOpen,
+  date,
 }: HeroSectionProps) {
   return (
     <section
@@ -38,7 +40,7 @@ export default function HeroSection({
           Andriana Amaliyah S
         </h1>
 
-        <p>Kamis, 29 Maret 2026</p>
+        <p>{date}</p>
 
         <div className="w-[100px] mx-auto">
           <Image

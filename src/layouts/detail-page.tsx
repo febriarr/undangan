@@ -1,24 +1,35 @@
 "use client";
-
+import EventSection, { EventSectionProps } from "@/layouts/event-section";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Volume2, VolumeX } from "lucide-react";
-import Image from "next/image";
 import AOS from "aos";
-
+import { Button } from "@/components/ui/button";
+import { Volume2, VolumeX } from "lucide-react";
 import HeroSection from "@/layouts/hero-section";
 import ProfileMempelaiSection from "@/layouts/profile-mempelai-section";
-import EventSection from "@/layouts/event-section";
+import Image from "next/image";
 import Countdown from "@/layouts/countdown";
-import GallerySection from "@/layouts/gallery-section";
-import LoveStorySection from "@/layouts/love-story-section";
 import GiftSection from "@/layouts/gift-section";
 import FormSection from "@/layouts/form-section";
 import CloseSection from "@/layouts/close-section";
 import Footer from "@/layouts/footer";
-import { Button } from "@/components/ui/button";
 
-export default function DetailPage() {
+export type DetailPageProps = {
+  heroSection: {
+    date: string;
+  };
+  eventSection: EventSectionProps;
+  countdownSection: {
+    targetDate: string;
+    targetTime: string;
+  };
+};
+
+export default function DetailPage({
+  heroSection,
+  eventSection,
+  countdownSection,
+}: DetailPageProps) {
   const params = useSearchParams();
   const namaTamu = params.get("to");
 
@@ -134,6 +145,7 @@ export default function DetailPage() {
         to={formatName(namaTamu ?? "Anda")}
         isOpen={isOpen}
         onOpenInvitation={handleOpenInvitation}
+        date={heroSection.date}
       />
 
       {/* CONTENT */}
@@ -143,7 +155,7 @@ export default function DetailPage() {
             <ProfileMempelaiSection />
           </div>
 
-          <EventSection />
+          <EventSection {...eventSection} />
 
           <div className="text-center">
             <Image
@@ -154,7 +166,10 @@ export default function DetailPage() {
               className={"w-full"}
             />
             <div className="my-6 px-4">
-              <Countdown targetDate="29 maret 2026" targetTime="06:00" />
+              <Countdown
+                targetDate={countdownSection.targetDate}
+                targetTime={countdownSection.targetTime}
+              />
             </div>
             <Image
               src="/divider.webp"

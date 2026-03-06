@@ -1,8 +1,7 @@
-import { Metadata } from "next";
-
-import { Suspense } from "react";
 import DetailPage, { DetailPageProps } from "@/layouts/detail-page";
 import { addressAndri } from "@/layouts/event-section";
+import { Suspense } from "react";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Wedding Invitation Aldi Pratama and Andriana Amaliyah Samsi",
@@ -13,10 +12,11 @@ export const metadata: Metadata = {
     images: [{ url: "https://invitation.solvrae.web.id/og-image.png" }],
   },
 };
-export default function AldiAndriPage() {
+
+export default function AndriAldiPage() {
   const propsDetailPage: DetailPageProps = {
     heroSection: {
-      date: "Rabu, 01 April 2026",
+      date: "Minggu, 29 Maret 2026",
     },
     eventSection: {
       marriageCovenant: {
@@ -31,22 +31,21 @@ export default function AldiAndriPage() {
         },
       },
       reception: {
-        day: "Rabu",
-        date: "01",
-        month: "April 2026",
-        time: "Bebas",
+        day: "Minggu",
+        date: "29",
+        month: "Maret 2026",
+        time: "09:00 WIB",
         address: {
-          street: "Perum Puri Brawijaya Permai Blok FH 10",
-          detail: "(Baluk - Kebalenan)",
-          linkMap: "https://maps.app.goo.gl/Ckm3YmaUTy5itJdm9?g_st=ic",
+          street: "Jl.Gatot Subroto, Kampung Baru, Bulusan",
+          detail: "(Gudang Karka Selatan STP)",
+          linkMap: addressAndri,
         },
       },
-      bride: "pria",
-      event: "Ngunduh Mantu",
+      bride: "wanita",
     },
     countdownSection: {
-      targetDate: "01 april 2026",
-      targetTime: "18:00",
+      targetDate: "29 maret 2026",
+      targetTime: "09:00",
     },
   };
 
