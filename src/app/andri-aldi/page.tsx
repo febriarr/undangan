@@ -34,7 +34,7 @@ export default function AndriAldiPage() {
         day: "Minggu",
         date: "29",
         month: "Maret 2026",
-        time: "09:00 WIB",
+        time: "18:00 WIB",
         address: {
           street: "Jl.Gatot Subroto, Kampung Baru, Bulusan",
           detail: "(Gudang Karka Selatan STP)",
