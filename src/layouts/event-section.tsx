@@ -20,7 +20,10 @@ export type DetailDate = {
 export type EventSectionProps = {
   reception: DetailDate;
   marriageCovenant: DetailDate;
-  bride: string;
+  bride: {
+    akad: string;
+    resepsi: string;
+  };
   event?: string;
 };
 
@@ -83,7 +86,7 @@ export default function EventSection({
           <p className={"text-sm"}>
             <MapPin className={"w-4 h-4"} />
           </p>
-          <p className={"text-sm"}>Kediaman Mempelai {bride}</p>
+          <p className={"text-sm"}>Kediaman Mempelai {bride.akad}</p>
           <p className={"text-sm"}>
             {marriageCovenant.address.street}
             <br />
@@ -115,7 +118,7 @@ export default function EventSection({
           <p className={"text-sm"}>
             <MapPin className={"w-4 h-4"} />
           </p>
-          <p className={"text-sm"}>Kediaman Mempelai {bride}</p>
+          <p className={"text-sm"}>Kediaman Mempelai {bride.resepsi}</p>
           <p className={"text-sm"}>
             {reception.address.street}
             <br />

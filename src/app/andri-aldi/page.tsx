@@ -41,7 +41,10 @@ export default function AndriAldiPage() {
           linkMap: addressAndri,
         },
       },
-      bride: "wanita",
+      bride: {
+        akad: "wanita",
+        resepsi: "wanita",
+      },
     },
     countdownSection: {
       targetDate: "29 maret 2026",

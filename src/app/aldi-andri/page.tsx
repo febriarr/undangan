@@ -41,7 +41,10 @@ export default function AldiAndriPage() {
           linkMap: "https://maps.app.goo.gl/Ckm3YmaUTy5itJdm9?g_st=ic",
         },
       },
-      bride: "pria",
+      bride: {
+        akad: "wanita",
+        resepsi: "pria",
+      },
       event: "Ngunduh Mantu",
     },
     countdownSection: {
