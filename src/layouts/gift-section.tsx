@@ -65,10 +65,10 @@ export default function GiftSection() {
             </div>
             <div className={"flex space-x-2 items-center"}>
               <p className={"text-sm"}>
-                No rek: <span className={"font-semibold"}>14300270396338</span>
+                No rek: <span className={"font-semibold"}>1430027039633</span>
               </p>
               <button
-                onClick={() => handleCopy("14300270396338")}
+                onClick={() => handleCopy("1430027039633")}
                 type={"button"}
               >
                 <Copy className={"w-4 h-4"} />
